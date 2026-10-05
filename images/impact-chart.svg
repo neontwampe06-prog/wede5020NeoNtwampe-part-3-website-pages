@@ -1,0 +1,8 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a rising bar chart representing organisational impact and growth">
+<rect width="800" height="500" fill="#FFFFFF"/>
+<rect x="100" y="320" width="90" height="120" fill="#C3B492"/>
+<rect x="240" y="260" width="90" height="180" fill="#9DCCC2"/>
+<rect x="380" y="180" width="90" height="260" fill="#52857C"/>
+<rect x="520" y="100" width="90" height="340" fill="#30665E"/>
+<line x1="60" y1="440" x2="700" y2="440" stroke="#30665E" stroke-width="4"/>
+</svg>

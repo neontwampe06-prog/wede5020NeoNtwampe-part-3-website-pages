@@ -1,0 +1,112 @@
+/* ============================================================================
+   CLOTHES FOR ALL — STYLESHEET
+   Section numbers in the comments below refer to the Part 2 brief
+   (Designing the Visuals: CSS Styling and Responsive Design).
+   ============================================================================ */
+
+/* ----------------------------------------------------------------------------
+   2.1  EXTERNAL STYLESHEET
+   This single file (css/style.css) is linked from every page of the site,
+   so changing a rule here updates the whole website at once.
+   ---------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+   2.2  CSS RESET + BASE STYLE
+   A small reset removes each browser's own default spacing/box-sizing so the
+   site looks the same everywhere, then the base style sets the defaults
+   (font family, font size, colour scheme, margin/padding) for the whole page.
+   ---------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* 1rem = 16px by default. All spacing/type below is built from this. */
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Colour scheme — taken from the website proposal's colour palette table */
+:root {
+  --sage: #E4E5CF;        /* page background */
+  --taupe: #C3B492;       /* secondary background: sidebars, footer */
+  --turquoise: #9DCCC2;   /* donate / volunteer call-to-action */
+  --slate-green: #52857C; /* headlines and body text accents */
+  --spruce: #30665E;      /* nav bar and major titles */
+  --white: #FFFFFF;
+  --ink: #24332F;
+
+  --max-width: 1100px;
+  --radius: 6px;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--sage);
+  line-height: 1.6; /* base line-height for readable body copy */
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* ----------------------------------------------------------------------------
+   2.3  TYPOGRAPHY STYLES
+   A simple typographic scale (font-size, font-weight, line-height and
+   letter-spacing) keeps headings and body text consistent across pages.
+   Scale: 0.875rem < 1rem < 1.125rem < 1.5rem < 2rem < 2.75rem
+   ---------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600&family=Lora:wght@300;400italic&display=swap');
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--spruce);
+}
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2rem;   margin-bottom: 0.75rem; }
+h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 65ch; /* keeps body text an easy line-length to read */
+}
+
+.lede {
+  font-size: 1.125rem;
+  color: var(--sage);
+}
+
+.feature-title {
+  font-family: 'Lora', serif;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--slate-green);
+}
+

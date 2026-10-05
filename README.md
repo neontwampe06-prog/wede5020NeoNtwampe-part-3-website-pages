@@ -1,90 +1,62 @@
-# Clothes For All — Website
+# Clothes For All(CFA)
+- **Developer**: Neo Ntwampe
+- **Student Number**: ST10516094
+- **Group**: 1
+- **Course**: WEDE5020
+- **Subject**: Web Development
 
-A 5-page website built from the *Clothes For All Website Proposal*
-(ST10516094, Neo Ntwampe), following the project's colour palette,
-typography and page structure requirements.
+## Links
+- GitHub Repository: https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-neontwampe06-prog
 
-## File and folder structure
 
-```
-clothesforall/
-├── index.html         Homepage — hero, intro, calls to action, impact stats
-├── about.html          About Us — history, mission, vision, team members
-├── services.html       Our Work — programmes, distribution areas, FAQ
-├── enquiry.html         Enquiry / Get Involved — donate, volunteer or sponsor form
-├── contact.html         Contact — locations, embedded maps, contact form
-├── css/
-│   └── style.css          All site styling (Part 2)
-├── js/
-│   └── main.js             Mobile nav toggle, footer year, form confirmation
-├── images/                  SVG illustrations, including a mobile hero variant
-└── README.md                 This file
-```
+---
 
-## Design reference (Section 8 of the proposal)
+## Project Overview
+The site created for this project is a 5-page web site for a South African Non-Profitable Organisation called Clothes For All, which recycles good quality pre-loved clothes to impoverished communities. The organisation started in 2018 and currently has Collection Centres in Johannesburg, Cape Town, Durban and Gqeberha, serving communities in Gauteng, Eastern Cape and KwaZulu-Natal.
 
-- **Colours:** Pale sage green `#E4E5CF` (background), Tender Taupe
-  `#C3B492` (secondary background / footer), Pastel Turquoise `#9DCCC2`
-  (donate/volunteer buttons), Slate Green `#52857C` (headlines & body),
-  Deep Spruce Green `#30665E` (nav bar & major titles).
-- **Typography:** Montserrat (headings), Open Sans (body text), Lora
-  (feature/quote-style titles).
-- **Style:** Professional, modern, friendly, minimalist.
+---
 
-## Part 2 — CSS styling and responsive design
+## Website goal and objectives
 
-`css/style.css` is linked from every page and covers:
+### Goals:
+The main goal of this website is to, increase awareness, generate enquiries, recruit volunteers, attract sponsors and provide information. 
 
-- **Reset + base style:** a universal box-sizing/margin/padding reset,
-  and base rules for font family, font size, colour scheme and spacing.
-- **Typography scale:** a consistent set of font sizes (0.875rem up to
-  2.75rem), font weights, line-heights and letter-spacing, built with
-  Montserrat for headings and Open Sans for body text.
-- **Layout:** Flexbox for one-dimensional rows (the nav bar, the hero
-  buttons), and CSS Grid for two-dimensional layouts (card grids, the
-  team grid, and a named `grid-template-areas` layout for the footer).
-- **Visual styles:** colour, background-color, border and box-shadow
-  are used throughout, with `:hover`, `:focus` and `:active` states on
-  links, buttons and form fields.
-- **Responsive design:** three breakpoints —
-  - Desktop: 1025px and above (default styles)
-  - Tablet: 769px–1024px (two-column sections collapse to one column,
-    the hero stacks vertically, the footer grid reflows)
-  - Mobile: 768px and below (the nav becomes a toggled menu, all grids
-    go to a single column, heading sizes scale down)
+## Objectives:
+- Raise Awareness: Get the public to know about clothing poverty in South Africa, and what is being done about it by CFA.
+- Attract and register Volunteers: to help in collections, sorting and distribution activities
+- Make it easy to donate: Make it easy to donate clothes and money.
+- Establish Partnerships: Secure business support and involvement, and community partners
+- Share information: Provide clear information on how the organisation is making an impact, how it is being shared and stories from those who are benefiting.
 
-  Spacing and type use relative units (`rem`, `em`, `%`) rather than
-  fixed pixel values, so the layout scales smoothly between breakpoints.
-- **Responsive images:** the homepage hero image uses a `<picture>`
-  element with `srcset`/`sizes` so a square-cropped version
-  (`hero-donation-mobile.svg`) is served on narrow screens, and the
-  wider illustration on tablet/desktop. Every other image uses
-  `max-width: 100%` so it scales fluidly within its container.
 
-### Testing
+### Key Features and functionality:
+- Contact Form
+- Enquiry Form
+- Image Gallery
+- Embedded Map
+- Testimonials
+- Frequently Asked Questions
+- Blog / News Section
+- Social Media Links
+- Volunteer Registration Form
+- Donation Portal (integration with payment options)
 
-The site was tested by resizing the browser window and using the
-device toolbar in browser dev tools at common desktop, tablet and
-mobile widths, checking that the navigation, grids and forms behave
-correctly at each breakpoint. **Add your own screenshots here** — in
-Chrome or Edge, open dev tools (F12), toggle the device toolbar, and
-capture the homepage at roughly 1440px (desktop), 768px (tablet) and
-375px (mobile), then paste them into this section before submitting.
 
-## Changelog
+---
 
-### Part 2 (this submission)
-- Added `css/style.css` and linked it from all five pages, covering
-  reset, base style, typography scale, Flexbox/Grid layout, visual
-  styling with hover/focus/active states, and responsive design across
-  desktop/tablet/mobile breakpoints (see above for details).
-- Rebuilt `js/main.js`, which was missing from the Part 1 submission —
-  it was referenced by every page but never actually included.
-- Added a `<picture>`/`srcset` responsive image on the homepage hero,
-  with a dedicated mobile-cropped SVG (`images/hero-donation-mobile.svg`).
-- Added a `.stat .label` CSS rule that was missing, so the impact-stat
-  captions on the homepage are now styled.
+## Timeline and milestones
 
-### Part 1 corrections
-- Re-checked all internal navigation links across the five pages.
-- Re-checked image `alt` text for descriptiveness.
+Milestone	Description	Duration	Target Date
+- Phase 1: Discovery & Planning	Finalise requirements, gather content, design wireframes	1 week	Week 1 (24-30 Aug 2026)
+- Phase 2: Design	Create visual mock-ups, finalise colour scheme and typography	1.5 weeks	Weeks 2-3 (31 Aug - 13 Sept)
+- Phase 3: Development	Front-end and back-end development, VS setup	2 weeks	Weeks 4-5 (14-27 Sept)
+- Phase 4: Content Migration	Upload text, images, and populate blog/news section	1 week	Week 6 (28 Sept - 4 Oct)
+- Phase 5: Testing	Cross-browser testing, mobile responsiveness, form testing	1 week	Week 7 (5-11 Oct)
+- Phase 6: Launch	Deploy to production, final QA, go-live	3 days	Week 8 (12-14 Oct)
+- Phase 7: Post-Launch	Monitoring, bug fixes, user feedback collection	Ongoing	From 15 Oct 2026
+
+---
+
+## Sitemap
+
+<img width="594" height="214" alt="Screenshot 2026-09-01 232401" src="https://github.com/user-attachments/assets/c103a145-05b4-476e-960b-e21cd30d6f79" />

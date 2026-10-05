@@ -1,0 +1,5 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a diverse group of community members standing together">
+<rect width="800" height="500" fill="#E4E5CF"/>
+<rect y="400" width="800" height="100" fill="#C3B492" opacity="0.4"/>
+<g transform="translate(110,250)"><circle cx="0" cy="0" r="38" fill="#C3B492"/><rect x="-42" y="34" width="84" height="130" rx="24" fill="#C3B492"/></g><g transform="translate(250,250)"><circle cx="0" cy="0" r="38" fill="#9DCCC2"/><rect x="-42" y="34" width="84" height="130" rx="24" fill="#9DCCC2"/></g><g transform="translate(390,250)"><circle cx="0" cy="0" r="38" fill="#52857C"/><rect x="-42" y="34" width="84" height="130" rx="24" fill="#52857C"/></g><g transform="translate(530,250)"><circle cx="0" cy="0" r="38" fill="#30665E"/><rect x="-42" y="34" width="84" height="130" rx="24" fill="#30665E"/></g><g transform="translate(670,250)"><circle cx="0" cy="0" r="38" fill="#C3B492"/><rect x="-42" y="34" width="84" height="130" rx="24" fill="#C3B492"/></g>
+</svg>

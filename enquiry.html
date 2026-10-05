@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved &amp; Enquiries | Clothes For All</title>
+  <meta name="description" content="Enquire about donating, volunteering or becoming a corporate sponsor with Clothes For All.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo">Clothes<span>For</span>All</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        Menu
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Work</a></li>
+          <li><a href="enquiry.html" aria-current="page">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="nav-cta">Donate / Volunteer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================= PAGE INTRO ================= -->
+    <section class="hero">
+      <div class="container">
+        <h1>Get Involved</h1>
+        <p class="lede">
+          Tell us how you'd like to support Clothes For All — as a donor, a
+          volunteer, or a corporate partner — and a member of our team will
+          be in touch.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ENQUIRY FORM ================= -->
+    <!-- As Clothes For All is an NPO, this enquiry form allows visitors to
+         ask about volunteering or becoming a sponsor, in addition to
+         general donation and media enquiries. -->
+    <section class="section-alt">
+      <div class="container">
+        <h2>Enquiry Form</h2>
+        <div class="form-wrapper">
+
+          <div id="form-status" role="status"></div>
+
+          <form class="js-validate-form" action="#" method="post" novalidate>
+
+            <div class="form-row">
+              <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+              <input type="text" id="full-name" name="full-name" required autocomplete="name">
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+
+            <fieldset>
+              <legend>I am enquiring about <span aria-hidden="true">*</span></legend>
+
+              <div class="radio-option">
+                <input type="radio" id="enquiry-donation" name="enquiry-type" value="donation" required checked>
+                <label for="enquiry-donation">Donating clothing or money</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="enquiry-volunteer" name="enquiry-type" value="volunteer">
+                <label for="enquiry-volunteer">Becoming a volunteer</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="enquiry-sponsor" name="enquiry-type" value="sponsor">
+                <label for="enquiry-sponsor">Becoming a corporate sponsor / partner</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="enquiry-other" name="enquiry-type" value="other">
+                <label for="enquiry-other">Other / media enquiry</label>
+              </div>
+            </fieldset>
+
+            <div class="form-row">
+              <label for="city">City / Collection Centre nearest you</label>
+              <select id="city" name="city">
+                <option value="">-- Select a city --</option>
+                <option value="johannesburg">Johannesburg</option>
+                <option value="cape-town">Cape Town</option>
+                <option value="durban">Durban</option>
+                <option value="gqeberha">Gqeberha</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Your message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us a little about how you'd like to help, or what you need."></textarea>
+            </div>
+
+            <p class="form-note">Fields marked with * are required.</p>
+
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY GET INVOLVED ================= -->
+    <section class="section-taupe">
+      <div class="container card-grid">
+        <div class="card">
+          <h3>For Donors</h3>
+          <p>Every bag of clean, good-quality clothing helps us clothe a family, a learner, or a matriculant in need.</p>
+        </div>
+        <div class="card">
+          <h3>For Volunteers</h3>
+          <p>Join a corps of 50+ volunteers collecting, sorting and distributing across four cities.</p>
+        </div>
+        <div class="card">
+          <h3>For Corporate Partners</h3>
+          <p>Support our work through sponsorship as part of your company's social responsibility programme.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Clothes For All</h4>
+        <p>Restoring dignity and confidence, one garment at a time, since 2018.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Clothes For All on Facebook">Fb</a>
+          <a href="#" aria-label="Clothes For All on Instagram">Ig</a>
+          <a href="#" aria-label="Clothes For All on X">X</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Work</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Johannesburg Collection Centre</li>
+          <li>info@clothesforall.org.za</li>
+          <li>011 555 0182</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year">2026</span> Clothes For All. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
