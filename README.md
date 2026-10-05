@@ -227,5 +227,3 @@ Tested / designed for:
 - All other content written for Clothes For All NPO
 
 ---
-
-**End of README**
