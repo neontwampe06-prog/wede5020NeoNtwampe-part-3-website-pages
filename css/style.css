@@ -492,4 +492,66 @@ legend {
     grid-template-columns: 1fr; /* multi-column -> single column */
     gap: 2rem;
   }
+  
+  .hero-grid {
+    flex-direction: column; /* Flexbox row -> column on tablet */
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "about about"
+      "nav   contact";
+  }
+
+  h1 { font-size: 2.25rem; } /* scale type down slightly for tablet */
+  h2 { font-size: 1.75rem; }
+}
+
+/* ---- 3.2  MOBILE (max-width: 48rem / 768px) ---- */
+@media (max-width: 48rem) { /* 768px */
+  /* Navigation: switch to the hamburger-style toggle on mobile */
+  .nav-toggle { display: inline-block; }
+
+  .main-nav { display: none; width: 100%; }
+  .main-nav.open { display: block; }
+
+  .main-nav ul {
+    flex-direction: column; /* row -> column */
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 1rem;
+  }
+  .main-nav li { border-top: 1px solid rgba(255, 255, 255, 0.15); }
+  .main-nav a { display: block; padding: 0.85rem 0.25rem; }
+
+  .nav-wrapper { flex-wrap: wrap; }
+
+  .card-grid,
+  .team-grid {
+    grid-template-columns: 1fr; /* single column on small screens */
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "nav"
+      "contact";
+  }
+
+  /* Smaller type scale for mobile screens */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.375rem; }
+  .lede { font-size: 1rem; }
+
+  section { padding: 2.5rem 0; }
+  .hero { padding: 2.5rem 0; }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .btn { transition: none; }
 }
