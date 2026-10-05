@@ -286,3 +286,210 @@ p {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+.team-member .info { padding: 1rem; }
+.team-member .role { color: var(--slate-green); font-weight: 600; font-size: 0.875rem; }
+
+/* ---- Timeline (About page history) ---- */
+.timeline {
+  border-left: 3px solid var(--turquoise);
+  padding-left: 1.5rem;
+}
+.timeline li { margin-bottom: 1.25rem; }
+.timeline .year {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--spruce);
+  display: block;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-primary { background-color: var(--turquoise); color: var(--ink); }
+.btn-primary:hover  { background-color: #86bdb1; }
+.btn-primary:active { background-color: #6fa89b; transform: scale(0.98); }
+
+.btn-secondary { background: transparent; border-color: var(--white); color: var(--white); }
+.btn-secondary:hover  { background-color: var(--white); color: var(--spruce); }
+.btn-secondary:active { background-color: var(--sage); }
+
+.btn-outline { background: transparent; border-color: var(--spruce); color: var(--spruce); }
+.btn-outline:hover  { background-color: var(--spruce); color: var(--white); }
+.btn-outline:active { background-color: var(--ink); }
+
+/* ---- Section backgrounds ---- */
+section { padding: 3.5rem 0; }
+.section-alt   { background-color: var(--white); }
+.section-taupe { background-color: var(--taupe); }
+
+/* ---- Forms ---- */
+.form-wrapper {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-row { margin-bottom: 1.25rem; }
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #b9b9a8;
+  border-radius: var(--radius);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  background-color: var(--sage);
+  color: var(--ink);
+}
+/* Interactive state: focus (section 2.5) */
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--turquoise);
+  outline-offset: 1px;
+  border-color: var(--spruce);
+}
+fieldset {
+  border: 1px solid #b9b9a8;
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 0 0.5rem;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.radio-option input { width: auto; }
+.form-note { font-size: 0.85rem; color: #4a4a3f; margin-top: -0.5rem; }
+
+#form-status {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  display: none;
+}
+#form-status.success {
+  display: block;
+  background-color: #e2f2ee;
+  color: var(--spruce);
+  border: 1px solid var(--turquoise);
+}
+#form-status.error {
+  display: block;
+  background-color: #fbe7e4;
+  color: #8a2f22;
+  border: 1px solid #d98b7b;
+}
+
+/* ---- Contact page ---- */
+.location-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--spruce);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.map-embed iframe {
+  width: 100%;
+  height: 20rem;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+/* ----------------------------------------------------------------------------
+   Footer — a named CSS Grid layout (grid-template-areas), as an example of a
+   more complex desktop Grid structure as required by section 2.4.
+   ---------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--taupe);
+  padding: 3rem 0 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-areas: "about nav contact";
+  gap: 2rem;
+}
+.footer-grid > div:nth-child(1) { grid-area: about; }
+.footer-grid > div:nth-child(2) { grid-area: nav; }
+.footer-grid > div:nth-child(3) { grid-area: contact; }
+
+.footer-grid h4 { color: var(--spruce); font-size: 1rem; margin-bottom: 0.75rem; }
+.footer-grid li { margin-bottom: 0.4rem; }
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.social-links a {
+  background-color: var(--spruce);
+  color: var(--white);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.social-links a:hover  { background-color: var(--slate-green); }
+.social-links a:active { background-color: var(--ink); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+}
+
+
+/* ============================================================================
+   3.  RESPONSIVE DESIGN
+
+   Breakpoints chosen for this site:
+     - Desktop : 1025px and above   (styles above are the desktop default)
+     - Tablet  : 769px  to 1024px
+     - Mobile  : 768px  and below
+
+   Each query below adjusts the layout (multi-column -> single column),
+   the navigation, and font sizes for that breakpoint, using relative units
+   (rem/em/%) rather than fixed pixel widths wherever possible.
+   ============================================================================ */
+
+/* ---- 3.1  TABLET (max-width: 1024px) ---- */
+@media (max-width: 64rem) { /* 1024px */
+  .two-col {
+    grid-template-columns: 1fr; /* multi-column -> single column */
+    gap: 2rem;
+  }
+}
