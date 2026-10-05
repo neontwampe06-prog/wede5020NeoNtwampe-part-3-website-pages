@@ -6,7 +6,7 @@
 - **Subject**: Web Development
 
 ## Links
-- GitHub Repository: https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-neontwampe06-prog
+- GitHub Repository: https://github.com/EMGPSD/wede5020-2026-part-2-neontwampe06-prog
 
 ---
 
@@ -69,17 +69,15 @@ The main goal of this website is to, increase awareness, generate enquiries, rec
 - Establish Partnerships: Secure business support and involvement, and community partners
 - Share information: Provide clear information on how the organisation is making an impact, how it is being shared and stories from those who are benefiting.
 
-### Key Features and functionality:
-- Contact Form
-- Enquiry Form
-- Image Gallery
-- Embedded Map
-- Testimonials
-- Frequently Asked Questions
-- Blog / News Section
-- Social Media Links
-- Volunteer Registration Form
-- Donation Portal (integration with payment options)
+### Implemented Features
+- Five linked pages: Home, About, Our Work, Get Involved, and Contact.
+- Contact and enquiry forms with browser-side required-field validation and a JavaScript thank-you message. The forms are demonstration-only and do not send submissions to a server.
+- Embedded Google Maps for the Johannesburg and Cape Town Collection Centres.
+- Frequently asked questions on the Our Work page.
+- Responsive layouts and local images.
+
+### Planned / Future Features
+The following items are not currently implemented: image gallery, testimonials, blog/news section, social media links, a separate volunteer registration workflow, and an online donation/payment portal.
 
 ---
 
@@ -174,29 +172,44 @@ These screenshots demonstrate:
 
 ---
 
-## Changelog (Feedback from Part 1)
+## Changelog: Code Changes from Part 1 to Part 2
 
-All corrections made after Part 1 feedback are recorded below.
+This comparison records the implementation changes between the Part 1 source in `clothesforall3/` and the Part 2 website. The Part 1 pages already had the five-page structure, navigation, content sections, forms, maps, image references, and `js/main.js`; the responsive stylesheet and screenshot evidence were added for Part 2.
 
-### 2026-10-05 – Part 2 implementation & Part 1 fixes
+### 2026-10-05 — Part 2 styling, responsive design, and content corrections
 
-| Change | Reason / Feedback addressed |
-|--------|-----------------------------|
-| Created external `css/style.css` and linked it on every HTML page | Required for Part 2 (external stylesheet) |
-| Fixed broken `<h3>` tag on About page (Lerato Phahle) | Invalid HTML – missing closing tag |
-| Corrected image paths for team members (removed non-existent `clothesforall3/` folder) | Broken images |
-| Standardised all image references to the `images/` folder | Consistency |
-| Replaced external Unsplash URL on Home with local image | Reliability / offline viewing |
-| Added missing `</h3>` and proper structure for team cards | Markup validity |
-| Removed non-existent image references (`Clothing Donation.avif`, `community-group.svg`, `Take part.avif`) | Prevent 404 errors |
-| Improved semantic structure (consistent section classes) | Better cascading & maintainability |
-| Added viewport meta tag was already present; confirmed on all pages | Mobile readiness |
-| Added sticky header and visual hierarchy via CSS | Desktop visual quality |
-| Implemented Flexbox card grids and responsive media queries | Layout + Responsive Design requirements |
-| Enhanced form styling and success-message class | Usability |
-| Updated `main.js` path references remain correct | No change needed |
-| Added four free stock images (Pexels) for programmes, community and donation sections | Visual enrichment of the site |
-| Captured and embedded desktop, tablet and mobile screenshots in README | Part 2 responsive design evidence requirement |
+#### HTML pages
+
+| File | Changes from Part 1 to Part 2 |
+|------|-------------------------------|
+| `index.html` | Replaced the externally hosted Unsplash hero image with the local `images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg` file and updated its alt text to describe the image. Added the local `images/donation-bin.jpg` image to the ways-to-help section and centered its Get Involved call-to-action. Refined the hero description and section wording. |
+| `about.html` | Rewrote the history, mission, vision, and audience copy. Fixed the unclosed Lerato `<h3>` element. Replaced the invalid `clothesforall3/images/...` team-photo paths and filenames containing spaces with the existing `images/team-member-neo.jpg`, `images/team-member-lerato.jpg`, and `images/team-member-johnathan.jpg` paths. Updated the team image alt text and retained the Part 1 team members and roles. |
+| `services.html` | Replaced references to missing `Clothing Donation.avif` and `community-group.svg` files with local `donation-volunteers.jpg` and `community-aid.jpg` images and descriptive alt text. Revised programme descriptions and added inline spacing to the FAQ cards and styling to the distribution-area list. |
+| `enquiry.html` | Replaced the missing `Take part.avif` hero image with the local `images/sorting-clothes.jpg` image and descriptive alt text. Retained the enquiry form fields and donation, volunteer, and sponsor choices. |
+| `contact.html` | Kept the Part 1 collection-centre details, map embeds, and contact form; added visible Google Maps attribution below the embedded Johannesburg and Cape Town maps. |
+| All five HTML pages | Added a link to the shared `css/style.css` stylesheet. Preserved the existing viewport meta tags and shared navigation, footer, and `js/main.js` include. |
+
+#### New stylesheet and responsive layouts
+
+- Added `css/style.css`; Part 1 did not include this stylesheet.
+- Added a universal reset (`box-sizing`, margin, and padding), a shared system-font stack, a base type scale, and consistent colours derived from the impact-chart palette.
+- Styled the shared header/navigation, hero sections, content sections, cards, buttons, team profiles, forms, map containers, and footers.
+- Used Flexbox for navigation, card columns, and footer layouts; added hover, focus, and active states for interactive elements.
+- Added responsive rules at 900px, 600px, and 400px to adjust typography, navigation, spacing, columns, buttons, and map proportions for tablet and mobile widths.
+- Made images scale within their containers and made embedded maps retain a responsive aspect ratio.
+
+#### JavaScript
+
+- `js/main.js` was already present in Part 1 and was carried forward unchanged in Part 2.
+- It updates the footer year and displays a client-side thank-you message after form submission. It prevents the form from sending data to a server; form processing is not implemented.
+
+#### Images and submission evidence
+
+- Added local programme/community/donation images: `community-aid.jpg`, `donation-bin.jpg`, `donation-volunteers.jpg`, and `sorting-clothes.jpg`.
+- Renamed the three team-photo files from names containing spaces to `team-member-neo.jpg`, `team-member-lerato.jpg`, and `team-member-johnathan.jpg`, and corrected their HTML paths.
+- Removed the obsolete Part 1 image assets `Clothing Donation.avif`, `Take part.avif`, and `team members.jpg` from the Part 2 image set. The original hero image file and `impact-chart.svg` remain in use.
+- Added `screenshots/desktop-home.png`, `screenshots/tablet-about.png`, `screenshots/mobile-contact.png`, and `screenshots/mobile-enquiry.png`, with the screenshot evidence embedded in this README.
+- Added this file-by-file code comparison and the Part 2 CSS/responsive-design documentation to the README.
 
 ---
 
