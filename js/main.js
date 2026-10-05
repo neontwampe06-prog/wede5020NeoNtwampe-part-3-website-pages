@@ -1,56 +1,30 @@
-/* ==========================================================================
-   Clothes For All — main.js
-   Handles: mobile navigation toggle, footer year, and a simple
-   confirmation message when the Enquiry / Contact forms are submitted.
-   ========================================================================== */
+// Clothes For All - main.js
+// Simple script to show a thank you message when a form is submitted,
+// and to display the current year in the footer.
 
-document.addEventListener('DOMContentLoaded', function () {
+// Show the current year in the footer
+var yearSpan = document.getElementById("current-year");
+if (yearSpan) {
+  var today = new Date();
+  yearSpan.textContent = today.getFullYear();
+}
 
-  // ---- Mobile navigation toggle ----
-  // The nav is hidden on small screens (see the mobile media query in
-  // css/style.css) until this button is used to reveal it.
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.main-nav');
+// Handle the enquiry and contact forms
+var forms = document.querySelectorAll("form");
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  }
+for (var i = 0; i < forms.length; i++) {
+  forms[i].addEventListener("submit", function (event) {
+    // Stop the form from actually submitting, since there is no server
+    event.preventDefault();
 
-  // ---- Footer year ----
-  var yearSpan = document.getElementById('current-year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+    // Show the thank you message
+    var message = this.querySelector("#form-message");
+    if (message) {
+      message.textContent = "Thank you! Your message has been received.";
+      message.className = "success";
+    }
 
-  // ---- Form handling (Enquiry + Contact pages) ----
-  var forms = document.querySelectorAll('.js-validate-form');
-
-  forms.forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      var statusBox = form.querySelector('#form-status');
-      var isValid = form.checkValidity();
-
-      if (!isValid) {
-        form.reportValidity();
-        if (statusBox) {
-          statusBox.textContent = 'Please fill in all required fields correctly.';
-          statusBox.className = 'error';
-        }
-        return;
-      }
-
-      if (statusBox) {
-        statusBox.textContent = 'Thank you — your message has been received. A CFA team member will be in touch soon.';
-        statusBox.className = 'success';
-      }
-
-      form.reset();
-    });
+    // Clear the form fields
+    this.reset();
   });
-
-});
+}

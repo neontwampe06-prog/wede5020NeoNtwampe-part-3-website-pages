@@ -1,9 +1,0 @@
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a clothing collection point with donation bins">
-<rect width="800" height="500" fill="#E4E5CF"/>
-<rect x="150" y="200" width="150" height="220" rx="16" fill="#9DCCC2"/>
-<rect x="330" y="150" width="150" height="270" rx="16" fill="#30665E"/>
-<rect x="510" y="230" width="150" height="190" rx="16" fill="#C3B492"/>
-<circle cx="225" cy="230" r="26" fill="#E4E5CF"/>
-<circle cx="405" cy="180" r="26" fill="#E4E5CF"/>
-<circle cx="585" cy="260" r="26" fill="#E4E5CF"/>
-</svg>
