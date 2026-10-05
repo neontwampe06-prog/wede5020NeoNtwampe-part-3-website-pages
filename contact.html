@@ -4,145 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Clothes For All</title>
-  <meta name="description" content="Contact Clothes For All, or find your nearest Collection Centre in Johannesburg, Cape Town, Durban or Gqeberha.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ================= HEADER / NAVIGATION ================= -->
-  <header class="site-header">
-    <div class="nav-wrapper">
-      <a href="index.html" class="logo">Clothes<span>For</span>All</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
-        Menu
-      </button>
-
-      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+  <!-- Header with logo and navigation menu -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Clothes For All</a>
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Our Work</a></li>
           <li><a href="enquiry.html">Get Involved</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-          <li><a href="enquiry.html" class="nav-cta">Donate / Volunteer</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main-content">
+  <main>
 
-    <!-- ================= PAGE INTRO ================= -->
     <section class="hero">
       <div class="container">
         <h1>Contact Us</h1>
-        <p class="lede">
-          Reach out to our head office, or visit your nearest Collection
-          Centre in person.
-        </p>
+        <p>Reach out to us, or visit your nearest Collection Centre.</p>
       </div>
     </section>
 
-    <!-- ================= COLLECTION CENTRE LOCATIONS ================= -->
-    <section class="section-alt">
+    <!-- Collection centre locations with maps -->
+    <section class="section-white">
       <div class="container">
         <h2>Our Collection Centres</h2>
-        <div class="two-col">
 
-          <div>
-            <div class="location-card">
+        <div class="clearfix">
+          <div class="col">
+            <div class="location-box">
               <h3>Johannesburg (Head Office)</h3>
-              <p>145 Bree Street, Johannesburg CBD, Gauteng, 2001<br>
-              Mon–Fri: 08:00–16:00 · Sat: 09:00–13:00</p>
+              <p>145 Bree Street, Johannesburg CBD, Gauteng, 2001</p>
             </div>
             <div class="map-embed">
               <iframe
                 src="https://maps.google.com/maps?q=Johannesburg%20CBD%2C%20South%20Africa&output=embed"
-                title="Map showing the Johannesburg Collection Centre location"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                title="Map of the Johannesburg Collection Centre"
+                loading="lazy">
               </iframe>
             </div>
+            <p style="font-size: 0.85rem; color: #6a5e52; margin-top: 0.5rem;">Map data © Google</p>
           </div>
 
-          <div>
-            <div class="location-card">
+          <div class="col">
+            <div class="location-box">
               <h3>Cape Town Collection Centre</h3>
-              <p>22 Voortrekker Road, Maitland, Cape Town, 7405<br>
-              Mon–Fri: 08:00–16:00 · Sat: 09:00–13:00</p>
+              <p>22 Voortrekker Road, Maitland, Cape Town, 7405</p>
             </div>
             <div class="map-embed">
               <iframe
                 src="https://maps.google.com/maps?q=Maitland%2C%20Cape%20Town%2C%20South%20Africa&output=embed"
-                title="Map showing the Cape Town Collection Centre location"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                title="Map of the Cape Town Collection Centre"
+                loading="lazy">
               </iframe>
             </div>
+            <p style="font-size: 0.85rem; color: #6a5e52; margin-top: 0.5rem;">Map data © Google</p>
           </div>
-
         </div>
 
-        <div class="card-grid" style="margin-top:2rem;">
-          <div class="location-card">
-            <h3>Durban Collection Centre</h3>
-            <p>8 Umgeni Road, Durban, KwaZulu-Natal, 4001</p>
+        <div class="clearfix">
+          <div class="col">
+            <div class="location-box">
+              <h3>Durban Collection Centre</h3>
+              <p>8 Umgeni Road, Durban, KwaZulu-Natal, 4001</p>
+            </div>
           </div>
-          <div class="location-card">
-            <h3>Gqeberha Collection Centre</h3>
-            <p>60 Cape Road, Gqeberha, Eastern Cape, 6001</p>
+          <div class="col">
+            <div class="location-box">
+              <h3>Gqeberha Collection Centre</h3>
+              <p>60 Cape Road, Gqeberha, Eastern Cape, 6001</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= CONTACT DETAILS + FORM ================= -->
+    <!-- Contact form -->
     <section class="section-taupe">
-      <div class="container two-col">
-        <div>
-          <h2>Get in touch</h2>
-          <p>
-            Have a general question, a donation offer, a partnership
-            proposal, or a media enquiry? Send us a message and our team
-            will respond within two business days.
-          </p>
-          <ul>
-            <li><strong>Email:</strong> info@clothesforall.org.za</li>
-            <li><strong>Phone:</strong> 011 555 0182</li>
-            <li><strong>Head Office:</strong> 145 Bree Street, Johannesburg CBD</li>
-          </ul>
-        </div>
+      <div class="container">
+        <h2>Send Us a Message</h2>
 
-        <div class="form-wrapper">
-          <div id="form-status" role="status"></div>
+        <div class="form-box">
+          <p id="form-message"></p>
 
-          <form class="js-validate-form" action="#" method="post" novalidate>
-            <div class="form-row">
-              <label for="c-name">Full name <span aria-hidden="true">*</span></label>
-              <input type="text" id="c-name" name="name" required autocomplete="name">
-            </div>
+          <form action="#" method="post">
 
-            <div class="form-row">
-              <label for="c-email">Email address <span aria-hidden="true">*</span></label>
-              <input type="email" id="c-email" name="email" required autocomplete="email">
-            </div>
+            <label for="c-name">Full Name</label>
+            <input type="text" id="c-name" name="name" required>
 
-            <div class="form-row">
-              <label for="c-subject">Subject <span aria-hidden="true">*</span></label>
-              <input type="text" id="c-subject" name="subject" required>
-            </div>
+            <label for="c-email">Email Address</label>
+            <input type="email" id="c-email" name="email" required>
 
-            <div class="form-row">
-              <label for="c-message">Message <span aria-hidden="true">*</span></label>
-              <textarea id="c-message" name="message" rows="5" required></textarea>
-            </div>
+            <label for="c-subject">Subject</label>
+            <input type="text" id="c-subject" name="subject" required>
 
-            <p class="form-note">Fields marked with * are required.</p>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" required></textarea>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
       </div>
@@ -150,19 +117,14 @@
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
+  <!-- Footer -->
+  <footer>
+    <div class="container clearfix">
+      <div class="footer-col">
         <h4>Clothes For All</h4>
-        <p>Restoring dignity and confidence, one garment at a time, since 2018.</p>
-        <div class="social-links" aria-label="Social media links">
-          <a href="#" aria-label="Clothes For All on Facebook">Fb</a>
-          <a href="#" aria-label="Clothes For All on Instagram">Ig</a>
-          <a href="#" aria-label="Clothes For All on X">X</a>
-        </div>
+        <p>Restoring dignity and confidence since 2018.</p>
       </div>
-      <div>
+      <div class="footer-col">
         <h4>Navigate</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -172,7 +134,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h4>Contact</h4>
         <ul>
           <li>Johannesburg Collection Centre</li>
@@ -182,7 +144,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="current-year">2026</span> Clothes For All. All rights reserved.</p>
+      <p>&copy; <span id="current-year">2026</span> Clothes For All</p>
     </div>
   </footer>
 
