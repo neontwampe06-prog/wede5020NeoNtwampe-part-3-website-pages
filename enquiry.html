@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://formsubmit.co; frame-src https://maps.google.com; form-action https://formsubmit.co; upgrade-insecure-requests">
   <title>Donate or Volunteer | Get Involved with Clothes For All</title>
   <meta name="description" content="Donate clothing, volunteer or discuss sponsorship with Clothes For All. Send an enquiry and choose your nearest South African collection centre.">
+  <link rel="canonical" href="https://emgpsd.github.io/wede5020-2026-part-3-neontwampe06-prog/enquiry.html">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +33,7 @@
       <div class="container">
         <h1>Get Involved</h1>
         <p>Tell us how you would like to support Clothes For All.</p>
-        <img src="images/sorting-clothes.jpg" alt="Volunteers organising clothing and aid donations for the community" width="500">
+        <img src="images/sorting-clothes.jpg" alt="Volunteers organising clothing and aid donations for the community" width="500" fetchpriority="high" decoding="async">
       </div>
     </section>
 
@@ -48,6 +50,7 @@
             data-ajax-action="https://formsubmit.co/ajax/info@clothesforall.org.za"
             method="post"
             novalidate>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full-name" maxlength="80" minlength="2" required aria-invalid="false">

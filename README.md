@@ -6,7 +6,7 @@
 - **Subject**: Web Development
 
 ## Links
-- GitHub Repository: https://github.com/EMGPSD/wede5020-2026-part-2-neontwampe06-prog
+- GitHub Repository: https://github.com/EMGPSD/wede5020-2026-part-3-neontwampe06-prog
 
 ---
 
@@ -36,9 +36,9 @@ This repository contains a multi-page responsive website built for the organisat
 ├── css/
 │   └── style.css          ← External stylesheet (Part 2)
 ├── js/
-│   └── main.js            ← Footer year + form thank-you message
+│   └── main.js            ← Footer year, form validation, and interactions
 ├── images/
-│   ├── hannah-busing-Zyx1bK9mqmA-unsplash.jpg
+│   ├── hands-together-community-support.jpg
 │   ├── impact-chart.svg
 │   ├── team-member-neo.jpg
 │   ├── team-member-lerato.jpg
@@ -52,6 +52,8 @@ This repository contains a multi-page responsive website built for the organisat
 │   ├── tablet-about.png
 │   ├── mobile-contact.png
 │   └── mobile-enquiry.png
+├── robots.txt
+├── sitemap.xml
 └── README.md
 ```
 
@@ -71,13 +73,17 @@ The main goal of this website is to, increase awareness, generate enquiries, rec
 
 ### Implemented Features
 - Five linked pages: Home, About, Our Work, Get Involved, and Contact.
-- Contact and enquiry forms with browser-side required-field validation and a JavaScript thank-you message. The forms are demonstration-only and do not send submissions to a server.
-- Embedded Google Maps for the Johannesburg and Cape Town Collection Centres.
-- Frequently asked questions on the Our Work page.
+- Contact and enquiry forms with browser-side validation, spam honeypots and HTTPS submission through FormSubmit. Verify recipient activation and spam settings in the service before launch.
+- Embedded, lazy-loaded Google Maps for all four collection centres.
+- An interactive FAQ accordion and community photo gallery with a lightbox on the Our Work page.
+- Page-specific titles and meta descriptions, descriptive image alt text, and image loading optimizations.
+- A restrictive Content Security Policy on each HTML page.
+- `robots.txt` and an XML sitemap for the GitHub Pages site URL; verify the deployed URL matches before submitting it to search engines.
+- Facebook, LinkedIn and WhatsApp share links on the home page.
 - Responsive layouts and local images.
 
 ### Planned / Future Features
-The following items are not currently implemented: image gallery, testimonials, blog/news section, social media links, a separate volunteer registration workflow, and an online donation/payment portal.
+The following items are not currently implemented: testimonials, blog/news section, branded social media profiles and active off-site promotion/backlink outreach, a separate volunteer registration workflow, and an online donation/payment portal.
 
 ---
 
