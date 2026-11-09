@@ -45,36 +45,44 @@
           <form
             action="https://formsubmit.co/info@clothesforall.org.za"
             data-ajax-action="https://formsubmit.co/ajax/info@clothesforall.org.za"
-            method="post">
+            method="post"
+            novalidate>
 
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" required>
+            <input type="text" id="full-name" name="full-name" maxlength="80" minlength="2" required aria-invalid="false">
+            <div id="full-name-error" class="field-error" aria-live="polite"></div>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" maxlength="254" required aria-invalid="false">
+            <div id="email-error" class="field-error" aria-live="polite"></div>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" maxlength="15" aria-invalid="false" placeholder="e.g. 071 234 5678 or +27 71 234 5678">
+            <div id="phone-error" class="field-error" aria-live="polite"></div>
 
             <label for="enquiry-type">I am enquiring about</label>
-            <select id="enquiry-type" name="enquiry-type" required>
+            <select id="enquiry-type" name="enquiry-type" required aria-invalid="false">
               <option value="" disabled selected>Select an enquiry type</option>
               <option value="donation">Donating clothing or money</option>
               <option value="volunteer">Becoming a volunteer</option>
               <option value="sponsor">Becoming a corporate sponsor</option>
               <option value="other">Other</option>
             </select>
+            <div id="enquiry-type-error" class="field-error" aria-live="polite"></div>
 
             <label for="city">Nearest Collection Centre</label>
-            <select id="city" name="city">
+            <select id="city" name="city" aria-invalid="false">
+              <option value="">Select a collection centre</option>
               <option value="johannesburg">Johannesburg</option>
               <option value="cape-town">Cape Town</option>
               <option value="durban">Durban</option>
               <option value="gqeberha">Gqeberha</option>
             </select>
+            <div id="city-error" class="field-error" aria-live="polite"></div>
 
             <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" minlength="10" maxlength="1000" required aria-invalid="false"></textarea>
+            <div id="message-error" class="field-error" aria-live="polite"></div>
 
             <button type="submit" class="btn">Send Enquiry</button>
           </form>

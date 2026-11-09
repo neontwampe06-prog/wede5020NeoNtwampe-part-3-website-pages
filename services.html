@@ -91,20 +91,64 @@
     <section class="section-white">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
-        <div class="card" style="margin-bottom: 1rem;">
-          <h3>What can I donate?</h3>
-          <p>Clean, good quality clothing for all ages, including school uniforms and formal wear.</p>
-        </div>
-        <div class="card" style="margin-bottom: 1rem;">
-          <h3>How do I volunteer?</h3>
-          <p>Fill in the enquiry form and a coordinator in your area will contact you.</p>
-        </div>
-        <div class="card">
-          <h3>How do I ask for help?</h3>
-          <p>Schools, families and community organisations can reach out through our enquiry form or visit a Collection Centre.</p>
+        <div class="faq-accordion" aria-label="Frequently asked questions">
+          <div class="faq-item is-open">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>What can I donate?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Clean, good quality clothing for all ages, including school uniforms and formal wear.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How do I volunteer?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Fill in the enquiry form and a coordinator in your area will contact you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How do I ask for help?</span>
+            </button>
+            <div class="faq-answer">
+              <p>Schools, families and community organisations can reach out through our enquiry form or visit a Collection Centre.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section-taupe">
+      <div class="container">
+        <h2>Our Community Impact</h2>
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-image="images/donation-volunteers.jpg" data-title="Volunteers sorting donated clothing" aria-label="View volunteers sorting donated clothing">
+            <img src="images/donation-volunteers.jpg" alt="Volunteers sorting clothing donations for distribution">
+          </button>
+          <button class="gallery-item" type="button" data-image="images/sorting-clothes.jpg" data-title="Sorting donated items in the distribution centre" aria-label="View sorting of donated clothing items">
+            <img src="images/sorting-clothes.jpg" alt="Volunteers sorting donated clothing items in a community collection centre">
+          </button>
+          <button class="gallery-item" type="button" data-image="images/community-aid.jpg" data-title="Community members receiving support and clothing" aria-label="View community aid distribution">
+            <img src="images/community-aid.jpg" alt="Community members receiving clothing and support during a local aid drive">
+          </button>
+          <button class="gallery-item" type="button" data-image="images/donation-bin.jpg" data-title="Donation bins ready for community contributions" aria-label="View donation bins for clothing and general support">
+            <img src="images/donation-bin.jpg" alt="Donation bin prepared for community clothing contributions">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="image-lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button type="button" class="lightbox-close" aria-label="Close image viewer">&times;</button>
+        <img id="lightbox-image" src="" alt="">
+        <p id="lightbox-title" class="lightbox-caption"></p>
+      </div>
+    </div>
 
   </main>
 

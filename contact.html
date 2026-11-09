@@ -98,16 +98,19 @@
           <form
             action="https://formsubmit.co/info@clothesforall.org.za"
             data-ajax-action="https://formsubmit.co/ajax/info@clothesforall.org.za"
-            method="post">
+            method="post"
+            novalidate>
 
             <label for="c-name">Full Name</label>
-            <input type="text" id="c-name" name="name" required>
+            <input type="text" id="c-name" name="name" maxlength="80" minlength="2" required aria-invalid="false">
+            <div id="c-name-error" class="field-error" aria-live="polite"></div>
 
             <label for="c-email">Email Address</label>
-            <input type="email" id="c-email" name="email" required>
+            <input type="email" id="c-email" name="email" maxlength="254" required aria-invalid="false">
+            <div id="c-email-error" class="field-error" aria-live="polite"></div>
 
             <label for="c-type">Type of Message</label>
-            <select id="c-type" name="message-type" required>
+            <select id="c-type" name="message-type" required aria-invalid="false">
               <option value="" disabled selected>Select a message type</option>
               <option value="General enquiry">General enquiry</option>
               <option value="Donation">Donation</option>
@@ -116,12 +119,15 @@
               <option value="Partnership or sponsorship">Partnership or sponsorship</option>
               <option value="Other">Other</option>
             </select>
+            <div id="c-type-error" class="field-error" aria-live="polite"></div>
 
             <label for="c-subject">Subject</label>
-            <input type="text" id="c-subject" name="subject" required>
+            <input type="text" id="c-subject" name="subject" maxlength="120" minlength="3" required aria-invalid="false">
+            <div id="c-subject-error" class="field-error" aria-live="polite"></div>
 
             <label for="c-message">Message</label>
-            <textarea id="c-message" name="message" rows="5" required></textarea>
+            <textarea id="c-message" name="message" rows="5" minlength="10" maxlength="1000" required aria-invalid="false"></textarea>
+            <div id="c-message-error" class="field-error" aria-live="polite"></div>
 
             <button type="submit" class="btn">Send Message</button>
           </form>
