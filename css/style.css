@@ -333,6 +333,17 @@ section h2::after {
   border-radius: 6px;
 }
 
+#form-message.error {
+  color: #8b1e1e;
+  background-color: #fff0f0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+}
+
+#form-message.pending {
+  color: #4a4038;
+}
+
 /* ---------- 11. Location / Map boxes ---------- */
 .location-box {
   background-color: #fff;

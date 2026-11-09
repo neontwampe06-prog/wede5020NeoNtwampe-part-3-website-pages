@@ -1,6 +1,5 @@
 // Clothes For All - main.js
-// Simple script to show a thank you message when a form is submitted,
-// and to display the current year in the footer.
+// Updates the footer year and submits forms through the configured email service.
 
 // Show the current year in the footer
 var yearSpan = document.getElementById("current-year");
@@ -9,73 +8,119 @@ if (yearSpan) {
   yearSpan.textContent = today.getFullYear();
 }
 
-// Handle the enquiry and contact forms
+function setFormMessage(message, text, state) {
+  message.textContent = text;
+  message.className = state;
+}
+
+// Submit the enquiry and contact forms through FormSubmit.
 var forms = document.querySelectorAll("form");
 
 for (var i = 0; i < forms.length; i++) {
-  forms[i].addEventListener("submit", function (event) {
-    // Stop the form from actually submitting, since there is no server
+  forms[i].addEventListener("submit", async function (event) {
     event.preventDefault();
 
     var message = this.querySelector("#form-message");
-    if (message) {
-      var enquiryType = this.querySelector("#enquiry-type");
-
-      if (enquiryType) {
-        var city = this.querySelector("#city");
-        var responses = {
-          donation:
-            "Please contact the selected centre to confirm clothing drop-off arrangements. The website does not list monetary donation or payment details.",
-          volunteer:
-            "Volunteer opportunities depend on current local needs. Contact the selected centre to confirm current availability and next steps.",
-          sponsor:
-            "Sponsorship arrangements depend on the support offered. Please include your organisation and the type of support in your message so the team can discuss suitable options.",
-          other:
-            "The team can advise on your request once they have the details in your message."
-        };
-
-        message.textContent =
-          "Thank you, " +
-          this.elements["full-name"].value +
-          ". Your " +
-          enquiryType.options[enquiryType.selectedIndex].text +
-          " enquiry for " +
-          city.options[city.selectedIndex].text +
-          " is ready. " +
-          responses[enquiryType.value] +
-          " This demo does not send enquiries, so please contact the organisation directly to receive a reply.";
-      } else if (this.querySelector("#c-type")) {
-        var messageType = this.querySelector("#c-type").value;
-        var subject =
-          "[" + messageType + "] " + this.querySelector("#c-subject").value;
-        var emailBody = [
-          "Name: " + this.querySelector("#c-name").value,
-          "Email: " + this.querySelector("#c-email").value,
-          "Type of message: " + messageType,
-          "",
-          this.querySelector("#c-message").value
-        ].join("\r\n");
-        var emailLink = document.createElement("a");
-
-        emailLink.href =
-          "mailto:info@clothesforall.org.za?subject=" +
-          encodeURIComponent(subject) +
-          "&body=" +
-          encodeURIComponent(emailBody);
-        emailLink.textContent = "Open email draft";
-        message.textContent =
-          "Your message is ready. It has not been sent yet; use this link to open it in your email app: ";
-        message.appendChild(emailLink);
-        message.className = "success";
-        return;
-      } else {
-        message.textContent = "Thank you! Your message has been received.";
-      }
-
-      message.className = "success";
+    if (!message) {
+      return;
     }
 
-    // Clear the form fields
-    this.reset();
+    var form = this;
+    var submitButton = form.querySelector('button[type="submit"]');
+    var originalButtonText = submitButton.textContent;
+    var formData = new FormData(form);
+    var payload = {};
+    var enquiryType = form.querySelector("#enquiry-type");
+    var subject;
+
+    formData.forEach(function (value, key) {
+      payload[key] = value;
+    });
+
+    if (enquiryType) {
+      subject =
+        "[" +
+        enquiryType.options[enquiryType.selectedIndex].text +
+        "] Enquiry from " +
+        form.elements["full-name"].value;
+      payload._replyto = form.elements.email.value;
+    } else {
+      subject =
+        "[" +
+        form.elements["message-type"].value +
+        "] " +
+        form.elements.subject.value;
+      payload._replyto = form.elements.email.value;
+    }
+
+    payload._subject = subject;
+    payload._template = "table";
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    setFormMessage(message, "Sending your message...", "pending");
+
+    try {
+      var response = await fetch(form.dataset.ajaxAction || form.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+      var result = await response.json();
+
+      if (
+        !response.ok ||
+        (result.success !== true && result.success !== "true")
+      ) {
+        throw new Error(
+          result.message || "The email service could not accept your message."
+        );
+      }
+
+      if (enquiryType) {
+        var responses = {
+          donation:
+            "The selected centre can confirm clothing drop-off arrangements; monetary donation details are not listed on this website.",
+          volunteer:
+            "The team can confirm current volunteer opportunities and next steps.",
+          sponsor:
+            "The team can discuss sponsorship options based on the support you described.",
+          other:
+            "The team can follow up with you about your request."
+        };
+        var city = form.querySelector("#city");
+
+        setFormMessage(
+          message,
+          "Your enquiry was accepted for email processing. " +
+            responses[enquiryType.value] +
+            " Selected centre: " +
+            city.options[city.selectedIndex].text +
+            ".",
+          "success"
+        );
+      } else {
+        setFormMessage(
+          message,
+          "Your message was accepted for email processing. The organisation can reply to the email address you provided.",
+          "success"
+        );
+      }
+
+      form.reset();
+    } catch (error) {
+      setFormMessage(
+        message,
+        "We could not submit your message. " +
+          error.message +
+          " Your entries have been kept; please try again or email info@clothesforall.org.za.",
+        "error"
+      );
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
   });
 }

@@ -40,9 +40,12 @@
         <h2>Enquiry Form</h2>
 
         <div class="form-box">
-          <p id="form-message"></p>
+          <p id="form-message" role="status" aria-live="polite"></p>
 
-          <form action="#" method="post">
+          <form
+            action="https://formsubmit.co/info@clothesforall.org.za"
+            data-ajax-action="https://formsubmit.co/ajax/info@clothesforall.org.za"
+            method="post">
 
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full-name" required>
@@ -75,6 +78,7 @@
 
             <button type="submit" class="btn">Send Enquiry</button>
           </form>
+          <p>Your form details are processed by FormSubmit to deliver the email. Do not include sensitive information.</p>
         </div>
       </div>
     </section>
