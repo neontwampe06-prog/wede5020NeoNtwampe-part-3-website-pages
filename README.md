@@ -256,6 +256,7 @@ Designed for recent versions of:
 
 ## AI Assistance
 This README structure and layout was completed with assistance from AI tools.
+https://copilot.com/chat/conversation/c9975e38-74ba-49d0-a79b-2ec2ec685127?fromcode=cmmwuwpzorz&es=Click&redirfrom=userTypeCookie&redirfrom=cosmicRingCookie
 
 ---
 
