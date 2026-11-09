@@ -161,6 +161,44 @@ nav a:focus {
   max-width: 480px;
 }
 
+.not-found {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.not-found-code {
+  color: #9DCCC2;
+  font-size: clamp(5rem, 18vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.not-found .btn {
+  background-color: #fff;
+  color: #30665E;
+}
+
+.not-found .btn:hover,
+.not-found .btn:focus {
+  background-color: #9DCCC2;
+  color: #2c2c2c;
+}
+
+.not-found-links {
+  margin: 1.5rem auto 0;
+  font-size: 0.95rem;
+}
+
+.not-found-links a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* ---------- 6. Sections ---------- */
 section {
   padding: 3rem 0;
