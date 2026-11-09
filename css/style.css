@@ -738,3 +738,30 @@ section img {
     text-align: center;
   }
 }
+
+/* Keyboard users need a clear focus indicator independent of hover styling. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #2c2c2c;
+  outline-offset: 3px;
+}
+
+header a:focus-visible,
+footer a:focus-visible,
+.btn:focus-visible {
+  outline-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

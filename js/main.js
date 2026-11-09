@@ -90,7 +90,7 @@ function validateField(field) {
   if (
     fieldId === "enquiry-type" ||
     fieldId === "c-type" ||
-    fieldName.indexOf("message-type") !== -1
+    fieldName === "message-type"
   ) {
     if (!value) {
       setFieldError(field, "Please select a message type.");
@@ -101,7 +101,7 @@ function validateField(field) {
   if (
     fieldId === "message" ||
     fieldId === "c-message" ||
-    fieldName.indexOf("message") !== -1
+    fieldName === "message"
   ) {
     if (value.length < 10 || value.length > 1000) {
       setFieldError(field, "Please write between 10 and 1000 characters.");
@@ -112,21 +112,12 @@ function validateField(field) {
   if (
     fieldId === "subject" ||
     fieldId === "c-subject" ||
-    fieldName.indexOf("subject") !== -1
+    fieldName === "subject"
   ) {
     if (value.length < 3 || value.length > 120) {
       setFieldError(field, "Please enter a subject between 3 and 120 characters.");
       return false;
     }
-  }
-
-  if (
-    fieldId === "city" &&
-    fieldName.indexOf("city") !== -1 &&
-    value === ""
-  ) {
-    clearFieldError(field);
-    return true;
   }
 
   clearFieldError(field);
