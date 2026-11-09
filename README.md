@@ -11,20 +11,16 @@
 ---
 
 ## Project Overview
-This project is a five-page website for Clothes For All, a South African non-profit organisation that collects and redistributes good-quality pre-loved clothing. The organisation started in 2018 and has collection centres in Johannesburg, Cape Town, Durban and Gqeberha, serving communities in Gauteng, the Eastern Cape and KwaZulu-Natal.
-
-Clothes For All is a non-profit organisation that collects, sorts and redistributes good-quality pre-loved clothing to underprivileged families, school learners and matriculants across Gauteng, the Eastern Cape and KwaZulu-Natal.
-
-This repository contains a multi-page responsive website built for the organisation.
+This project is a five-page website for Clothes For All. The organisation collects and shares good-quality second-hand clothing with families, learners and communities in South Africa. Its collection centres are in Johannesburg, Cape Town, Durban and Gqeberha.
 
 ### Pages
 | Page | File | Purpose |
 |------|------|---------|
-| Home | `index.html` | Hero, impact stats, call-to-action |
-| About Us | `about.html` | History, mission, vision, team |
-| Our Work | `services.html` | Programmes, locations, FAQs |
-| Get Involved | `enquiry.html` | Enquiry form (donate / volunteer / sponsor) |
-| Contact | `contact.html` | Collection centre addresses + contact form |
+| Home | `index.html` | Introduction and ways to help |
+| About Us | `about.html` | Organisation history and team |
+| Our Work | `services.html` | Clothing programmes and FAQs |
+| Get Involved | `enquiry.html` | Form for donors and volunteers |
+| Contact | `contact.html` | Centre addresses, maps and contact form |
 
 ### Folder Structure
 ```
@@ -59,31 +55,21 @@ This repository contains a multi-page responsive website built for the organisat
 
 ---
 
-## Website goal and objectives
+## Website goals
 
-### Goals:
-The main goal of this website is to, increase awareness, generate enquiries, recruit volunteers, attract sponsors and provide information.
+The website helps people learn about Clothes For All and find out how to donate clothing, volunteer or contact the organisation.
 
-## Objectives:
-- Raise Awareness: Get the public to know about clothing poverty in South Africa, and what is being done about it by CFA.
-- Attract and register Volunteers: to help in collections, sorting and distribution activities
-- Make it easy to donate: Make it easy to donate clothes and money.
-- Establish Partnerships: Secure business support and involvement, and community partners
-- Share information: Provide clear information on how the organisation is making an impact, how it is being shared and stories from those who are benefiting.
-
-### Current Features
+### What the website includes
 - Five linked pages: Home, About, Our Work, Get Involved, and Contact.
-- Contact and enquiry forms with client-side validation and honeypot fields. Valid submissions are sent to FormSubmit over HTTPS; successful delivery depends on the recipient address being activated with FormSubmit.
-- Embedded, lazy-loaded Google Maps for the four collection centres.
-- An interactive FAQ accordion and community photo gallery with a lightbox on the Our Work page.
-- Page-specific titles, meta descriptions, canonical URLs, descriptive image alt text, and social-sharing metadata on the home page.
-- A Content Security Policy on each HTML page, plus `robots.txt` and an XML sitemap for the configured GitHub Pages URL.
-- Lazy loading for below-the-fold images and maps, and reduced file size for the homepage image.
-- Facebook, LinkedIn and WhatsApp share links on the home page.
-- Responsive layouts, keyboard-visible focus styles and reduced-motion support.
+- Forms that check entries and send submissions through FormSubmit. The FormSubmit email address must be activated for delivery to work.
+- Google Maps for the four collection centres.
+- An FAQ that opens when clicked and a photo gallery on the Our Work page.
+- Page titles and descriptions, image descriptions for screen readers, and sharing information for the home page.
+- Basic search files (`robots.txt` and `sitemap.xml`).
+- Pages that adjust to different screen sizes, with keyboard focus styles and support for reduced motion.
 
 ### Planned / Future Features
-The website does not currently include testimonials, a blog/news section, branded social media profiles, a separate volunteer registration workflow, or online donation/payment. Social share links are provided, but ongoing social promotion and backlink outreach remain organisational tasks. Before launch, confirm the GitHub Pages URL, test the deployed forms and FormSubmit recipient activation, and submit the sitemap to search engines.
+The website does not yet have testimonials, a news section, official social media profiles, online donations, or a separate volunteer sign-up. The sharing buttons let visitors share the website, but the organisation still needs to promote it. Before launch, check the website address and test that the forms work.
 
 ---
 
@@ -91,13 +77,13 @@ The website does not currently include testimonials, a blog/news section, brande
 
 | Milestone | Description | Duration | Target Date |
 |-----------|-------------|----------|-------------|
-| Phase 1: Discovery & Planning | Finalise requirements, gather content, design wireframes | 1 week | Week 1 (24-30 Aug 2026) |
-| Phase 2: Design | Create visual mock-ups, finalise colour scheme and typography | 1.5 weeks | Weeks 2-3 (31 Aug - 13 Sept) |
-| Phase 3: Development | Front-end and back-end development, VS setup | 2 weeks | Weeks 4-5 (14-27 Sept) |
-| Phase 4: Content Migration | Upload text, images, and populate blog/news section | 1 week | Week 6 (28 Sept - 4 Oct) |
-| Phase 5: Testing | Cross-browser testing, mobile responsiveness, form testing | 1 week | Week 7 (5-11 Oct) |
-| Phase 6: Launch | Deploy to production, final QA, go-live | 3 days | Week 8 (12-14 Oct) |
-| Phase 7: Post-Launch | Monitoring, bug fixes, user feedback collection | Ongoing | From 15 Oct 2026 |
+| Phase 1: Planning | Gather requirements and content | 1 week | Week 1 (24-30 Aug 2026) |
+| Phase 2: Design | Choose the layout, colours and fonts | 1.5 weeks | Weeks 2-3 (31 Aug - 13 Sept) |
+| Phase 3: Development | Build the website | 2 weeks | Weeks 4-5 (14-27 Sept) |
+| Phase 4: Content | Add text and images | 1 week | Week 6 (28 Sept - 4 Oct) |
+| Phase 5: Testing | Check the pages, forms and mobile layout | 1 week | Week 7 (5-11 Oct) |
+| Phase 6: Launch | Publish and check the website | 3 days | Week 8 (12-14 Oct) |
+| Phase 7: Updates | Fix problems and make improvements | Ongoing | From 15 Oct 2026 |
 
 ---
 
@@ -116,14 +102,13 @@ The website does not currently include testimonials, a blog/news section, brande
   <link rel="stylesheet" href="css/style.css">
   ```
 
-### Design Decisions (Desktop)
-- **Colour palette** taken from the supplied impact-chart SVG:  
-  `#30665E` (deep teal), `#52857C`, `#9DCCC2`, `#C3B492` (taupe)
-- **Typography**: system font stack, clear hierarchy (h1–h4), comfortable line-height
-- **Layout**: Flexbox (`.clearfix` + `.col`) for multi-column card grids
-- **Visual styles**: cards with subtle shadows, rounded corners, hover lift effect
-- **Interactive elements**: `:hover`, `:focus` and `:active` states on links and buttons
-- **Forms**: consistent focus rings and success-message styling
+### Design
+- The colours come from the supplied impact chart: `#30665E`, `#52857C`, `#9DCCC2` and `#C3B492`.
+- The site uses a standard system font and different heading sizes.
+- Flexbox is used to lay out the cards, navigation and footer.
+- Cards and buttons share the same colours and rounded style.
+- Links and buttons change appearance when hovered or focused.
+- Forms show focus styles and messages when something needs attention.
 
 ### Responsive Design
 Breakpoints chosen:
@@ -134,29 +119,13 @@ Breakpoints chosen:
 | `max-width: 480px` | Single-column image gallery |
 | `max-width: 400px` | Very small phones |
 
-Techniques used:
-- Relative units (`rem`, `%`)
-- Flexible containers (`max-width` + `width: 100%`)
-- Flexbox that wraps to single column on small screens
-- Navigation that stacks vertically on mobile
-- Images scale with `max-width: 100%`
-- Map embeds keep aspect ratio via padding-bottom trick
-- The image gallery moves from four columns to two and then one column at smaller widths
-- Interactive features use flexible layouts and do not depend on a fixed viewport size
-- Keyboard focus indicators remain visible, and motion is reduced when requested by the operating system
+The layout uses flexible widths, wrapping columns, and images that shrink to fit the screen. The navigation stacks on small screens. The gallery changes from four columns to two and then one. Keyboard focus remains visible, and animations are reduced if a visitor has requested less motion in their device settings.
 
 ### How to Test Responsiveness
-1. Open any page in a modern browser.
-2. Open Developer Tools (F12) → Toggle device toolbar.
-3. Test at least the following widths:
-   - Desktop: 1200 px+
-   - Tablet: 768–900 px
-   - Mobile: 375–600 px
-4. Confirm:
-   - Navigation remains usable
-   - Cards stack into a single column
-   - Forms and buttons remain readable
-   - No horizontal scroll appears
+1. Open a page in a browser and open Developer Tools.
+2. Turn on the device toolbar.
+3. Check desktop, tablet and phone widths.
+4. Make sure the menu, cards and forms fit and that the page does not scroll sideways.
 
 ### Part 2 Screenshot Evidence
 
@@ -225,36 +194,36 @@ This section is a historical record of changes between the Part 1 source in `clo
 
 ---
 
-## Part 3 – Interactivity, validation, and SEO
+## Part 3 – Forms, maps and page updates
 
 ### Changes made
-- Added validation to both forms for required fields, email addresses, South African phone numbers, names, subjects and message length. Inline errors are announced to assistive technology, and invalid fields are identified before submission.
-- Connected valid form submissions to FormSubmit. The forms send personal details to a third-party email service; users are warned not to submit sensitive information. The recipient address must be activated with FormSubmit for delivery to work.
-- Added a single-open FAQ accordion and an image gallery with a keyboard-operable lightbox on `services.html`.
-- Added Google Maps embeds for the Durban and Gqeberha collection centres, completing the four locations on `contact.html`.
-- Added distinct page titles and meta descriptions, canonical page URLs, homepage Open Graph tags, descriptive alt text and image loading hints.
-- Resized and recompressed the homepage photo from 5040 × 3360 pixels (about 3.95 MB) to 1400 × 933 pixels (about 175 KB).
-- Added a Content Security Policy to each page, honeypot fields to both forms, `robots.txt`, and `sitemap.xml`.
-- Added social share links on the home page. These let visitors share the site; they do not represent official Clothes For All social profiles.
-- Added visible keyboard focus indicators and support for the reduced-motion preference, addressing the Part 2 feedback about accessibility and interactive features.
+- Added checks to the contact and enquiry forms. They show errors for missing or invalid information.
+- Connected the forms to FormSubmit. FormSubmit needs to approve the recipient email address before messages can be delivered. Do not enter sensitive information in the forms.
+- Added an FAQ menu and a photo gallery that opens larger images on `services.html`.
+- Added maps for the Durban and Gqeberha centres to `contact.html`.
+- Added page titles and short descriptions for search results.
+- Made the large home page photo smaller so it loads faster.
+- Added basic search-engine files, page security settings and spam-catching fields for the forms.
+- Added buttons for sharing the home page on Facebook, LinkedIn and WhatsApp. These are not official organisation accounts.
+- Added clearer keyboard focus styles and support for reduced motion.
 
 ### Part 2 feedback addressed
-- **Visual consistency:** retained the shared site palette, typography, spacing, cards and button styles for the new accordion, gallery, lightbox and social links.
-- **Keyboard accessibility:** added clear `:focus-visible` outlines to links, buttons and form controls rather than relying on hover styles.
-- **Responsive behaviour:** made the gallery adapt at 600px and 480px, and kept the new interactive elements flexible at tablet and mobile widths. Verify the pages at the listed viewport sizes before release.
+- **Same visual style:** the new parts use the site's existing colours and styles.
+- **Keyboard use:** links, buttons and form fields show a clear outline when selected with a keyboard.
+- **Small screens:** the gallery changes its layout for phones and tablets. Check it at different screen sizes before release.
 
 ### Validation performed
-- Checked `js/main.js` syntax with Node.js.
-- Checked the patch for whitespace errors with `git diff --check`.
-- Checked that the sitemap is valid XML and lists the five configured page URLs.
-- Checked local image references and that the form pages include honeypot fields.
-- The production site and form delivery still need to be tested after deployment; they could not be confirmed from this local workspace.
+- Checked the JavaScript for syntax errors.
+- Checked the changes for formatting errors.
+- Checked that the sitemap lists all five pages.
+- Checked the image paths and form spam fields.
+- The live site and form delivery still need to be tested after publishing.
 
 ### Part 2 to Part 3 changelog
 | File | Part 3 changes |
 |------|----------------|
-| `index.html` | Added SEO and canonical metadata, image loading hints, and Facebook, LinkedIn and WhatsApp share links. Updated the homepage image reference. |
-| `about.html`, `services.html`, `enquiry.html`, `contact.html` | Added page-specific SEO metadata and canonical URLs. |
+| `index.html` | Added page information for search results, image loading settings, and sharing buttons. Updated the homepage image path. |
+| `about.html`, `services.html`, `enquiry.html`, `contact.html` | Added page titles, descriptions and page links for search engines. |
 | `contact.html` | Added Durban and Gqeberha map embeds. |
 | `enquiry.html`, `contact.html`, `js/main.js` | Added client-side form validation, inline error feedback and FormSubmit AJAX delivery. |
 | `enquiry.html`, `contact.html` | Added form honeypot fields to reduce automated spam. |
@@ -277,11 +246,16 @@ This section is a historical record of changes between the Part 1 source in `clo
 
 ## Browser Compatibility
 
-Tested / designed for:
+Designed for recent versions of:
 - Google Chrome (latest)
 - Mozilla Firefox (latest)
 - Microsoft Edge (latest)
 - Safari (desktop & iOS)
+
+---
+
+## AI Assistance
+This README structure and layout was completed with assistance from AI tools.
 
 ---
 
