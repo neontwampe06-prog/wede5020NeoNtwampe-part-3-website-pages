@@ -93,7 +93,7 @@
         <h2>Send Us a Message</h2>
 
         <div class="form-box">
-          <p id="form-message"></p>
+          <p id="form-message" role="status" aria-live="polite"></p>
 
           <form action="#" method="post">
 
@@ -102,6 +102,17 @@
 
             <label for="c-email">Email Address</label>
             <input type="email" id="c-email" name="email" required>
+
+            <label for="c-type">Type of Message</label>
+            <select id="c-type" name="message-type" required>
+              <option value="" disabled selected>Select a message type</option>
+              <option value="General enquiry">General enquiry</option>
+              <option value="Donation">Donation</option>
+              <option value="Volunteer">Volunteering</option>
+              <option value="Request for support">Request for support</option>
+              <option value="Partnership or sponsorship">Partnership or sponsorship</option>
+              <option value="Other">Other</option>
+            </select>
 
             <label for="c-subject">Subject</label>
             <input type="text" id="c-subject" name="subject" required>

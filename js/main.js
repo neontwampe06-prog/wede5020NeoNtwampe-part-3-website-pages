@@ -44,6 +44,30 @@ for (var i = 0; i < forms.length; i++) {
           " is ready. " +
           responses[enquiryType.value] +
           " This demo does not send enquiries, so please contact the organisation directly to receive a reply.";
+      } else if (this.querySelector("#c-type")) {
+        var messageType = this.querySelector("#c-type").value;
+        var subject =
+          "[" + messageType + "] " + this.querySelector("#c-subject").value;
+        var emailBody = [
+          "Name: " + this.querySelector("#c-name").value,
+          "Email: " + this.querySelector("#c-email").value,
+          "Type of message: " + messageType,
+          "",
+          this.querySelector("#c-message").value
+        ].join("\r\n");
+        var emailLink = document.createElement("a");
+
+        emailLink.href =
+          "mailto:info@clothesforall.org.za?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(emailBody);
+        emailLink.textContent = "Open email draft";
+        message.textContent =
+          "Your message is ready. It has not been sent yet; use this link to open it in your email app: ";
+        message.appendChild(emailLink);
+        message.className = "success";
+        return;
       } else {
         message.textContent = "Thank you! Your message has been received.";
       }
